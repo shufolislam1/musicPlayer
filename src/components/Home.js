@@ -9,7 +9,7 @@ const Home = () => {
             .then(data => setMusic(data))
     }, [])
     return (
-        <div>
+        <div class="grid lg:grid-cols-3 gap-4 mt-8 p-6">
             {
                 music?.map(Home => <SingelHome Home={Home}></SingelHome>
                 )
