@@ -10,7 +10,6 @@ const Home = () => {
     }, [])
     return (
         <div>
-            <h2>{music.length}</h2>
             {
                 music?.map(Home => <SingelHome Home={Home}></SingelHome>
                 )
