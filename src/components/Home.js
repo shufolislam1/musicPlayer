@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import SingelHome from './SingelHome'
 
 const Home = () => {
-    const [music, setMusic] = useState({})
+    const [music, setMusic] = useState([])
     useEffect(() => {
         fetch("music.json")
             .then(res => res.json())
@@ -10,6 +11,10 @@ const Home = () => {
     return (
         <div>
             <h2>{music.length}</h2>
+            {
+                music?.map(Home => <SingelHome Home={Home}></SingelHome>
+                )
+            }
         </div>
     );
 };
