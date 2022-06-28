@@ -9,9 +9,15 @@ import Typography from '@mui/material/Typography';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
+import Checkbox from '@mui/material/Checkbox';
 
 const SingelHome = (Home) => {
     const theme = useTheme();
+    const [checked, setChecked] = React.useState(false);
+
+    const handleChange = (event) => {
+      setChecked(event.target.checked);
+    };
     return (
         <div>
             <Card sx={{ display: 'flex' }}>
@@ -42,6 +48,13 @@ const SingelHome = (Home) => {
                     image="https://i.ibb.co/HF7YvMn/vidar-nordli-mathisen-Me5rtd-Nm-Ir-U-unsplash.jpg"
                     alt="Live from space album cover"
                 />
+                <IconButton>
+                    <Checkbox
+                        checked={checked}
+                        onChange={handleChange}
+                        inputProps={{ 'aria-label': 'controlled' }}
+                    />
+                </IconButton>
             </Card>
         </div>
     );

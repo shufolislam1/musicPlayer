@@ -8,7 +8,7 @@ const PlayList = () => {
     return (
         <div className='flex justify-center '>
             <Box sx={{ '& > :not(style)': { m: 1 } }}>
-                <Button disabled variant="text">Create PlayList</Button>
+                <Button className='text-stone-400'>Create PlayList</Button>
                 <Fab color="primary" aria-label="add">
                     <AddIcon />
                 </Fab>
